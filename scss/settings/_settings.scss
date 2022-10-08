@@ -60,13 +60,13 @@
 //  55. Top Bar
 //  56. Xy Grid
 
-@import 'util/util';
+@import '../util/util';
 
 // 1. Global
 // ---------
 
 $global-font-size: 100%;
-$global-width: rem-calc(1200);
+$global-width: rem-calc(1920);
 $global-lineheight: 1.5;
 $foundation-palette: (
   "primary": #1779ba,
@@ -107,11 +107,12 @@ $print-hrefs: true;
 // --------------
 
 $breakpoints: (
-  "small": 0,
+  "tiny": 0,
+  "small": 400px,
   "medium": 640px,
   "large": 1024px,
   "xlarge": 1200px,
-  "xxlarge": 1440px,
+  "xxlarge": 1440px
 );
 $breakpoints-hidpi: (
   "hidpi-1": 1,
@@ -121,7 +122,7 @@ $breakpoints-hidpi: (
   "hidpi-3": 3
 );
 $print-breakpoint: large;
-$breakpoint-classes: (small medium large);
+$breakpoint-classes: (tiny small medium large xlarge xxlarge);
 
 // 3. The Grid
 // -----------
@@ -426,7 +427,7 @@ $dropdown-menu-item-background-active: transparent;
 // 19. Flexbox Utilities
 // ---------------------
 
-$flex-source-ordering-count: 6;
+$flex-source-ordering-count: 20;
 $flexbox-responsive-breakpoints: true;
 
 // 20. Forms
@@ -883,10 +884,16 @@ $topbar-unstack-breakpoint: medium;
 
 $xy-grid: true;
 $grid-container: $global-width;
-$grid-columns: 12;
+$grid-columns: 24;
 $grid-margin-gutters: (
   "small": 20px,
   "medium": 30px
+);
+$grid-margin-gutters: (
+  "tiny": 15px,
+  "small": 20px,
+  "large": 25px,
+  "xlarge": 30px
 );
 $grid-padding-gutters: $grid-margin-gutters;
 $grid-container-padding: $grid-padding-gutters;
